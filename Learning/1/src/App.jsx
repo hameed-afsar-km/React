@@ -2,6 +2,7 @@ import Heading from './heading';
 import Footer from './footer';
 import Props from './props';
 import Foods from './foods'
+import Form from './form'
 import './App.css';
 import MyComponent from './usestate-learning';
 import Counter from './counter'
@@ -9,6 +10,13 @@ import Counter from './counter'
 function App() {
   return (<>
     <Heading />
+    <br />
+    <hr />
+    <br />
+    <Foods />
+    <br />
+    <hr />
+    <br />
     <Props name="Afsar" isLoggedIn={true} />
     <br />
     <hr />
@@ -17,11 +25,11 @@ function App() {
     <br />
     <hr />
     <br />
-    <Foods />
+    <MyComponent />
     <br />
     <hr />
     <br />
-    <MyComponent />
+    <Form />
     <br />
     <hr />
     <br />
