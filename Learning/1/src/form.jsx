@@ -5,6 +5,11 @@ function Form() {
     const [age, setAge] = useState(0);
     const [comment, setComment] = useState("");
     const [payment, setPayment] = useState("None");
+    const [shipping, setShipping] = useState("");
+
+    function handleshipping(event) {
+        setShipping(event.target.value);
+    }
 
     return (<form>
         <input type="text" placeholder="Enter Your Name" value={name} onChange={(e) => setName(e.target.value)}></input>
@@ -20,6 +25,16 @@ function Form() {
             <option value="UPI">UPI</option>
         </select>
         <p>You Selected {payment}</p>
+
+        <label>
+            <input type="radio" value="Pickup" id="ship" name="ship" onChange={handleshipping}></input>PickUp
+        </label>
+
+        <label>
+            <input type="radio" value="Delivery" id="ship" name="ship" onChange={handleshipping}></input>Delivery
+        </label>
+        <p>Shipment Method: {shipping}</p>
+
     </form>);
 }
 
